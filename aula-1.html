@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Titulo da pagina</title>
+
+        <script type="text/javascript">
+            function soma(p1, p2){
+                alert("A soma é: " + (p1 + p2));
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1>Primeiro cabeçalho.</h1> 
+        <h2>Segundo cabeçalho.</h2>
+        <h3>Terceiro cabeçalho.</h3>
+
+        <p>Parágrafo de texto.</p>
+        <img src="img/Teemo.jpeg" title="Teemo" height="80" width="100">
+        <div>
+            <h3>Divisão de bloco: Links</h3>
+            <a href="https://www.google.com" target="blank"> Link em linha para o google</a>
+        </div>
+        
+
+        <a href="https://www.google.com" target="blank">
+            <img src="img/Teemo.jpeg" title="Teemo" height="80" width="100">
+        </a>
+        
+        <h2> Lista ordenada</h2>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <h2> Lista não ordenada</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        
+        <table>
+            <tr>
+                <td>Linha 1 - Coluna 1</td>
+                <td>Linha 1 - Coluna 2</td>
+            </tr>
+            <tr>
+                <td>Linha 2 - Coluna 1</td>
+                <td>Linha 2 - Coluna 2</td>
+            </tr>
+            <tr>
+                <td>Linha 3 - Coluna 1</td>
+                <td>Linha 3 - Coluna 2</td>
+            </tr>
+        </table>
+        
+        <h2>Formulário</h2>
+        <form action="/cadastro/" method="post">
+            <label for="login">Login</label>
+            <input type="text" name="login" id="login">
+
+            <label for="Senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+
+            <label for="idade">Idade</label>
+            <input type="number" min="0" max="98" step="1" name="Idade">
+            
+            <label for="sexo">Sexo</label>
+            <input type="radio" name="sexo" value="1" checked> Masculino
+            <input type="radio" name="sexo" value="2"> Feminino
+
+            <input type="checkbox" name="veiculo1" value="bike"> Eu tenho uma bike.
+            <input type="checkbox" name="veiculo2" value="carro">Eu tenho um carro.
+            
+            
+            Caixa de seleção
+            <select name="Curso">
+                <option value="1">Ciência da Computação</option>
+                <option value="2">Teatro</option>
+                <option value="3">Filosofia</option>
+                <option value="4">Administração</option>
+            </select>
+
+            <div></div>
+            Mensagem: <textarea name="message" rows="10" cols="30"></textarea>
+
+            Data de nascimento: <input type="date" name="data_nascimento" min="2025-08-20">
+
+            Auto Complete: <input list="cheeses"> 
+            <datalist id="cheeses">
+                <option>Prato</option>
+                <option>Cheddar</option>
+                <option>Provolone</option>
+            </datalist>
+            <input type="hidden" name="country" value="Brasil">
+
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+
+            <button type="button" onclick="alert('Hello world!')">Botão01</button>
+            <button type="button" onclick="soma(5,10);">
+                Botão 02
+            </button>
+        </form>
+    </body>
+</html>
