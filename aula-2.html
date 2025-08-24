@@ -1,13 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Components bootstrap - Aula 2</title>
-
         <link rel="stylesheet" href="css/bootstrap.css">
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/funcoes.js"></script>
-
     </head>
     <body data-bs-spy="scroll" data-bs-target="#lista-numerada">
         <div class="container text-center">
@@ -78,19 +78,18 @@
                     <section id="navegacao" class="d-flex flex-column align-items-center">
                         <h2>Navegação e Estruturação</h2>
                         <h4>Navbar</h4>
-                        <div class="accordion accordion-flush" id="accordionFlushNavbar">
-
-
-
+                        <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         Navbar
                                     </button>
                                 </h2>
-                                <div id="navbar" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNavbar">
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                                        <!-- 1. Navbar Padrão -->
+                                        <!-- mb-3 = margin-bottom: 0.5rem (8px)-->
+                                        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
                                             <div class="container-fluid">
                                                 <a class="navbar-brand" href="#">Navbar</a>
                                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,112 +119,272 @@
                                                         </li>
                                                     </ul>
                                                     <form class="d-flex" role="search">
-                                                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                                                            <button class="btn btn-outline-success" type="submit">Search</button>
+                                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                        <button class="btn btn-outline-success" type="submit">Search</button>
                                                     </form>
                                                 </div>
-                                                <!-- As a link -->
-                                                <nav class="navbar bg-body-tertiary">
-                                                    <div class="container-fluid">
-                                                        <a class="navbar-brand" href="#">Navbar</a>
-                                                    </div>
-                                                </nav>
-
-                                                <!-- As a heading -->
-                                                <nav class="navbar bg-body-tertiary">
-                                                    <div class="container-fluid">
-                                                        <span class="navbar-brand mb-0 h1">Navbar</span>
-                                                    </div>
-                                                </nav>
-                                                <nav class="navbar bg-body-tertiary">
-                                                    <div class="container">
-                                                    <a class="navbar-brand" href="#">
-                                                        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-                                                    </a>
-                                                    </div>
-                                                </nav>
-                                                <nav class="navbar bg-body-tertiary">
-                                                    <div class="container-fluid">
-                                                    <a class="navbar-brand" href="#">
-                                                        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                                                        Bootstrap
-                                                        </a>
-                                                    </div>
-                                                </nav>
-                                                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                                                    <div class="container-fluid">
-                                                        <a class="navbar-brand" href="#">Navbar</a>
-                                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                                            <span class="navbar-toggler-icon"></span>
-                                                        </button>
-                                                        <div class="collapse navbar-collapse" id="navbarNav">
-                                                            <ul class="navbar-nav">
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">Features</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">Pricing</a>
-                                                                </li>
-                                                                    <li class="nav-item">
-                                                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                                                            </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </nav>
-                                                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                                                    <div class="container-fluid">
-                                                        <a class="navbar-brand" href="#">Navbar</a>
-                                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                                            <span class="navbar-toggler-icon"></span>
-                                                        </button>
-                                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                                            <div class="navbar-nav">
-                                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                                                <a class="nav-link" href="#">Features</a>
-                                                                <a class="nav-link" href="#">Pricing</a>
-                                                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </nav>
-                                                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                                                    <div class="container-fluid">
-                                                        <a class="navbar-brand" href="#">Navbar</a>
-                                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                                            <span class="navbar-toggler-icon"></span>
-                                                        </button>
-                                                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                                                            <ul class="navbar-nav">
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">Features</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">Pricing</a>
-                                                                </li>
-                                                                <li class="nav-item dropdown">
-                                                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        Dropdown link
-                                                                    </a>
-                                                                    <ul class="dropdown-menu">
-                                                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </nav>
-
                                             </div>
                                         </nav>
+
+                                        <!-- 2. Navbar Simples -->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Navbar Simples</a>
+                                            </div>
+                                        </nav>
+
+                                        <!-- 3. Navbar Heading -->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <span class="navbar-brand mb-0 h1">Navbar Heading</span>
+                                            </div>
+                                        </nav>
+
+                                        <!-- 4. Navbar com Logo UFT -->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container">
+                                                <a class="navbar-brand" href="#">
+                                                    <img src="img/brasao-uft.png" alt="Logo UFT" width="30" height="24">
+                                                </a>
+                                            </div>
+                                        </nav>
+
+                                        <!-- 5. Navbar com Logo e Texto -->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">
+                                                    <img src="img/brasao-cc.jpeg" alt="Logo CC" width="30" height="24" class="d-inline-block align-text-top">
+                                                    Computação UFT
+                                                </a>
+                                            </div>
+                                        </nav>
+
+                                        <!-- 6. Navbar Expansível com Menu -->
+                                        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Menu</a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarNav">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Sobre</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Contato</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+
+                                        <!-- 7. Navbar com Dropdown -->
+                                        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Dropdown</a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Menu Dropdown
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Ação 1</a></li>
+                                                                <li><a class="dropdown-item" href="#">Ação 2</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item" href="#">Outro item</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+
+                                        <!--8. Navbar com Forms-->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <form class="d-flex" role="search">
+                                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                                </form>
+                                            </div>
+                                        </nav>
+
+                                        <!--9. texto e forms-->
+                                        <!--10. busca @ -->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand">Navbar</a>
+                                                <form class="d-flex" role="search">
+                                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                                </form>
+                                            </div>
+                                        </nav>
+
+                                        <!--11. Botão grande e pequeno-->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <form class="container-fluid justify-content-start">
+                                                <button class="btn btn-outline-success me-2" type="button">Main button</button>
+                                                <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+                                            </form>
+                                        </nav>
+
+                                        <!--12.texto em linha-->
+                                        <nav class="navbar bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <span class="navbar-text">
+                                                Navbar text with an inline element
+                                                </span>
+                                            </div>
+                                        </nav>
+
+                                        <!--13. Navbar w/ text-->
+                                        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Navbar w/ text</a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarText">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Features</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Pricing</a>
+                                                        </li>
+                                                    </ul>
+                                                    <span class="navbar-text">
+                                                        Navbar text with an inline element
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </nav>
+
+                                        <!--14. Cores-->
+                                        <!-- mb-3 = margin-bottom: 0.5rem (8px)-->
+                                        <nav class="navbar bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Navbar</a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Link</a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Dropdown
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                                        </li>
+                                                    </ul>
+                                                    <form class="d-flex" role="search">
+                                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </nav>
+
+                                        <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Navbar</a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Link</a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Dropdown
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                                        </li>
+                                                    </ul>
+                                                    <form class="d-flex" role="search">
+                                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </nav>
+
+                                        <nav class="navbar mb-3 " style="background-color: #e3f2fd;" data-bs-theme="light">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">Navbar</a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Link</a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Dropdown
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                                        </li>
+                                                    </ul>
+                                                    <form class="d-flex" role="search">
+                                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -233,12 +392,11 @@
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navs" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         Navs & tabs
                                     </button>
                                 </h2>
-                            </div>
-                            <div id="navs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNavbar">
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ul class="nav">
                                         <li class="nav-item">
@@ -262,5 +420,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Scripts do Bootstrap -->
+
     </body>
 </html>
