@@ -77,8 +77,8 @@
                     <hr>
                     <section id="navegacao" class="d-flex flex-column">
                         <h2>Navegação e Estruturação</h2>
-                        <h4>Navbar</h4>
                         <div class="accordion" id="accordion-navegacao">
+                            <!--Navbar-->
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-navbar" aria-expanded="false" aria-controls="collapseOne">
@@ -623,15 +623,14 @@
                                     </div>
                                 </div>
                             </div>
-
-
+                            <!--Navs & Tabs-->
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavsTabs" aria-expanded="false" aria-controls="collapseTwo">
                                         Navs & tabs
                                     </button>
                                 </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                <div id="collapseNavsTabs" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
                                     <div class="accordion-body">
                                         <h3>Navegação base</h3>
                                         <ul class="nav">
@@ -800,7 +799,65 @@
                                 </div>
                             </div>
                             <!--Breadcrumb-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreadcrumb"
+                                    aria-expanded="false"
+                                    aria-controls="collapseBreadcrumb">
+                                    Breadcrumb
+                                    </button>
+                                </h2>
+                                <div id="collapseBreadcrumb" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        <h3>Exemplo padrão</h3>
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active" aria-current="page">Home</li>
+                                            </ol>
+                                        </nav>
 
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                            </ol>
+                                        </nav>
+
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                            </ol>
+                                        </nav>
+                                        <h3>Divisores</h3>
+                                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                            </ol>
+                                        </nav>
+                                        <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                            </ol>
+                                        </nav>
+                                        <nav style="--bs-breadcrumb-divider: '->';" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                            </ol>
+                                        </nav>
+                                        <nav style="--bs-breadcrumb-divider: '<';" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </section>
