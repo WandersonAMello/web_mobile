@@ -17,3 +17,5 @@ if (alertTrigger) {
     appendAlert('Nice, you triggered this alert message!', 'success')
 })
 }
+const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
