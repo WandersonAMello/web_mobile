@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Components bootstrap - Aula 2</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/funcoes.js"></script>
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#lista-numerada">
+        <div class="container text-center">
+            <div class="row">
+
+                <div id="menu-esquerdo" class="col-md-3">
+                    <div id="boxmenulateral" class="position-sticky" style="top: 20px;">
+                        <div class="row" style="top: 20px">
+                            <div class="col">
+                                <div class="brasao-navbar">
+                                    <img src="img/brasao-uft.png" title="brasao-uft" height="100" width="100">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="brasao-navbar">
+                                    <img src="img/brasao-cc.jpeg" title="brasao-cc" height="100" width="100" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h6>Universidade Federal do Tocantins</h6>
+                                <h6>Ciência da Computação</h6>
+                                <h6>Disciplina: Desenvolvimento WebMobile</h6>
+                                <h3><strong>Components bootstrap</strong></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <div class="list-group list-group-numbered" id="lista-numerada">
+                                    <a href="#apresentacao" class="list-group-item list-group-item-action">
+                                        Apresentação da Atividade
+                                    </a>
+                                    <a href="#navegacao" class="list-group-item list-group-item-action">
+                                        Navegação e Estruturação
+                                    </a>
+                                    <a href="#acoes" class="list-group-item list-group-item-action">
+                                        Ações e Entradas do Usuário
+                                    </a>
+                                    <a href="#exibicao" class="list-group-item list-group-item-action">
+                                        Exibição de Conteúdo
+                                    </a>
+                                    <a href="#feedback" class="list-group-item list-group-item-action">
+                                        Feedback, Status e Avisos
+                                    </a>
+                                    <a href="#sobreposicao" class="list-group-item list-group-item-action">
+                                        AComponentes de Sobreposição e Estrutura
+                                    </a>
+                                    <a href="#carregamento" class="list-group-item list-group-item-action">
+                                        Indicadores de Carregamento e Estado Vazio
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="conteudo-lado-direito" class="col-md-9">
+                    <section id="apresentacao">
+
+                    </section>
+                    <hr>
+                    <section id="navegacao" class="d-flex flex-column">
+                        <h2>Navegação e Estruturação</h2>
+                        <div class="accordion" id="accordion-navegacao">
+                            <!--Navbar-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-navbar" aria-expanded="false" aria-controls="collapseOne">
+                                        Navbar
+                                    </button>
+                                </h2>
+                                <div id="collapse-navbar" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Navs & Tabs-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavsTabs" aria-expanded="false" aria-controls="collapseTwo">
+                                        Navs & tabs
+                                    </button>
+                                </h2>
+                                <div id="collapseNavsTabs" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Breadcrumb-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreadcrumb"
+                                    aria-expanded="false"
+                                    aria-controls="collapseBreadcrumb">
+                                    Breadcrumb
+                                    </button>
+                                </h2>
+                                <div id="collapseBreadcrumb" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Pagination-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePagination"
+                                    aria-expanded="false"
+                                    aria-controls="collapsePagination">
+                                    Pagination
+                                    </button>
+                                </h2>
+                                <div id="collapsePagination" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Scrollspy-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScrollspy"
+                                    aria-expanded="false"
+                                    aria-controls="collapseScrollspy">
+                                    Scrollspy
+                                    </button>
+                                </h2>
+                                <div id="collapseScrollspy" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="acoes" class="d-flex flex-column">
+                        <h2>Ações e Entradas do Usuário</h2>
+                        <div class="accordion" id="accordion-navegacao">
+                            <!--Navbar-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-navbar" aria-expanded="false" aria-controls="collapseOne">
+                                        Navbar
+                                    </button>
+                                </h2>
+                                <div id="collapse-navbar" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Navs & Tabs-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavsTabs" aria-expanded="false" aria-controls="collapseTwo">
+                                        Navs & tabs
+                                    </button>
+                                </h2>
+                                <div id="collapseNavsTabs" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Breadcrumb-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreadcrumb"
+                                    aria-expanded="false"
+                                    aria-controls="collapseBreadcrumb">
+                                    Breadcrumb
+                                    </button>
+                                </h2>
+                                <div id="collapseBreadcrumb" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Pagination-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePagination"
+                                    aria-expanded="false"
+                                    aria-controls="collapsePagination">
+                                    Pagination
+                                    </button>
+                                </h2>
+                                <div id="collapsePagination" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Scrollspy-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScrollspy"
+                                    aria-expanded="false"
+                                    aria-controls="collapseScrollspy">
+                                    Scrollspy
+                                    </button>
+                                </h2>
+                                <div id="collapseScrollspy" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="exibicao" class="d-flex flex-column">
+                        <h2>Exibição de Conteúdo</h2>
+                        <div class="accordion" id="accordion-navegacao">
+                            <!--Navbar-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-navbar" aria-expanded="false" aria-controls="collapseOne">
+                                        Navbar
+                                    </button>
+                                </h2>
+                                <div id="collapse-navbar" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Navs & Tabs-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavsTabs" aria-expanded="false" aria-controls="collapseTwo">
+                                        Navs & tabs
+                                    </button>
+                                </h2>
+                                <div id="collapseNavsTabs" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Breadcrumb-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreadcrumb"
+                                    aria-expanded="false"
+                                    aria-controls="collapseBreadcrumb">
+                                    Breadcrumb
+                                    </button>
+                                </h2>
+                                <div id="collapseBreadcrumb" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Pagination-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePagination"
+                                    aria-expanded="false"
+                                    aria-controls="collapsePagination">
+                                    Pagination
+                                    </button>
+                                </h2>
+                                <div id="collapsePagination" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Scrollspy-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScrollspy"
+                                    aria-expanded="false"
+                                    aria-controls="collapseScrollspy">
+                                    Scrollspy
+                                    </button>
+                                </h2>
+                                <div id="collapseScrollspy" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="feedback" class="d-flex flex-column">
+                        <h2>Exibição de Conteúdo</h2>
+                        <div class="accordion" id="accordion-navegacao">
+                            <!--Navbar-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-navbar" aria-expanded="false" aria-controls="collapseOne">
+                                        Navbar
+                                    </button>
+                                </h2>
+                                <div id="collapse-navbar" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Navs & Tabs-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavsTabs" aria-expanded="false" aria-controls="collapseTwo">
+                                        Navs & tabs
+                                    </button>
+                                </h2>
+                                <div id="collapseNavsTabs" class="accordion-collapse collapse" data-bs-parent="#accordion-navegacao">
+                                    <div class="accordion-body">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Breadcrumb-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreadcrumb"
+                                    aria-expanded="false"
+                                    aria-controls="collapseBreadcrumb">
+                                    Breadcrumb
+                                    </button>
+                                </h2>
+                                <div id="collapseBreadcrumb" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Pagination-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePagination"
+                                    aria-expanded="false"
+                                    aria-controls="collapsePagination">
+                                    Pagination
+                                    </button>
+                                </h2>
+                                <div id="collapsePagination" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Scrollspy-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScrollspy"
+                                    aria-expanded="false"
+                                    aria-controls="collapseScrollspy">
+                                    Scrollspy
+                                    </button>
+                                </h2>
+                                <div id="collapseScrollspy" class="accordion-collapse collapse" data-bs-parent="accordion-navegacao">
+                                    <div class="accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
