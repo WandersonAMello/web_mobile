@@ -81,7 +81,7 @@
                             <strong>Este projeto consiste em um catálogo interativo e visual de todos os componentes padrão do framework Bootstrap v5.3</strong>, desenvolvido como parte da atividade acadêmica proposta. O conteúdo foi estruturado em uma página única, onde os componentes são agrupados em seções temáticas baseadas em sua funcionalidade, como "Navegação", "Exibição de Conteúdo" e "Feedback".
                         </p>
                         <p>
-                            A própria navegação desta página é um exemplo prático do uso dos componentes: o menu lateral utiliza um <a href="#list-group">List Group</a>  numerado e é dinamicamente atualizado pela funcionalidade <a href="#scrollspy">Scrollspy</a>, guiando o usuário pelas diferentes seções. O objetivo é não apenas listar, mas também demonstrar a aplicação e a versatilidade de cada ferramenta que o Bootstrap oferece para a construção de interfaces web modernas e responsivas.
+                            A própria navegação lateral é um exemplo prático, utilizando os componentes <a href="#list-group">List Group</a> e <a href="#scrollspy">Scrollspy</a> para guiar o usuário pela página.
                         </p>
                     </section>
                     <hr>
@@ -2299,7 +2299,58 @@
                                 </h2>
                                 <div id="collapse-spinners" class="accordion-collapse collapse" data-bs-parent="#accordion-feedback">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: Tipos de Spinner</h3>
+                                            <p>Existem dois estilos principais: Borda (border) e Crescimento (grow).</p>
 
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            <div class="spinner-grow text-primary" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Cores Contextuais</h3>
+                                            <p>Use as classes de texto <code>.text-{color}</code> para definir a cor.</p>
+
+                                            <div class="spinner-border text-primary" role="status"></div>
+                                            <div class="spinner-border text-secondary" role="status"></div>
+                                            <div class="spinner-border text-success" role="status"></div>
+                                            <div class="spinner-border text-danger" role="status"></div>
+                                            <div class="spinner-border text-warning" role="status"></div>
+                                            <div class="spinner-border text-info" role="status"></div>
+                                            <div class="spinner-border text-light" role="status"></div>
+                                            <div class="spinner-border text-dark" role="status"></div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 3: Tamanhos</h3>
+                                            <p>Use as classes <code>.spinner-border-sm</code> ou defina a dimensão via CSS.</p>
+
+                                            <div class="spinner-border spinner-border-sm me-3" role="status"></div>
+                                            <div class="spinner-grow spinner-grow-sm" role="status"></div>
+
+                                            <div class="spinner-border ms-3" style="width: 3rem; height: 3rem;" role="status"></div>
+                                            <div class="spinner-grow ms-3" style="width: 3rem; height: 3rem;" role="status"></div>
+                                            
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 4: Em Botões</h3>
+                                            <p>Um uso muito comum para indicar que uma ação está sendo processada após um clique.</p>
+
+                                            <button class="btn btn-primary" type="button" disabled>
+                                                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                                <span role="status">Carregando...</span>
+                                            </button>
+                                            
+                                            <button class="btn btn-success ms-2" type="button" disabled>
+                                                <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                                                <span role="status">Salvando...</span>
+                                            </button>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2312,7 +2363,97 @@
                                 </h2>
                                 <div id="collapse-toasts" class="accordion-collapse collapse" data-bs-parent="#accordion-feedback">
                                     <div class="accordion-body">
+                                        <div>
 
+                                            <div>
+
+                                                <h3 class="mb-3">Básico</h3>
+                                                <p>Um toast padrão com cabeçalho e corpo, tornado visível com a classe <code>.show</code>.</p>
+                                                <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="toast-header">
+                                                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-short.svg" class="rounded me-2" alt="" width="20">
+                                                        <strong class="me-auto">Bootstrap</strong>
+                                                        <small>Agora</small>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="toast-body">
+                                                        Olá, mundo! Esta é uma notificação de toast.
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-5">
+
+                                                <h3 class="mb-3">Conteúdo Customizado e Esquemas de Cores</h3>
+                                                
+                                                <div class="toast show align-items-center mb-3" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body">
+                                                            Olá, mundo! Esta é uma notificação sem cabeçalho.
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="toast show align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body">
+                                                            Sucesso! A operação foi concluída.
+                                                        </div>
+                                                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <hr class="my-5">
+
+                                                <h3 class="mb-3">Empilhamento</h3>
+                                                <p>Vários toasts dentro de um <code>.toast-container</code> são empilhados verticalmente.</p>
+                                                <div class="toast-container position-static">
+                                                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <strong class="me-auto">Notificação 1</strong>
+                                                        </div>
+                                                        <div class="toast-body">
+                                                            Primeira mensagem.
+                                                        </div>
+                                                    </div>
+                                                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                                                        <div class="toast-header">
+                                                            <strong class="me-auto">Notificação 2</strong>
+                                                        </div>
+                                                        <div class="toast-body">
+                                                            Segunda mensagem, empilhada abaixo da primeira.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <hr class="my-5">
+
+                                                <h3 class="mb-3">Posicionamento</h3>
+                                                <p>Exemplos de toasts posicionados em diferentes cantos de um contêiner.</p>
+                                                <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative" style="min-height: 240px; border-radius: 0.25rem;">
+                                                    <div class="toast-container position-absolute top-0 start-0 p-3">
+                                                        <div class="toast show">
+                                                            <div class="toast-header"><strong class="me-auto">Topo Esquerdo</strong></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="toast-container position-absolute top-0 end-0 p-3">
+                                                        <div class="toast show">
+                                                            <div class="toast-header"><strong class="me-auto">Topo Direito</strong></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="toast-container position-absolute bottom-0 start-0 p-3">
+                                                        <div class="toast show">
+                                                            <div class="toast-header"><strong class="me-auto">Inferior Esquerdo</strong></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="toast-container position-absolute bottom-0 end-0 p-3">
+                                                        <div class="toast show">
+                                                            <div class="toast-header"><strong class="me-auto">Inferior Direito</strong></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -2337,7 +2478,103 @@
                                 </h2>
                                 <div id="collapse-modal" class="accordion-collapse collapse" data-bs-parent="#accordion-sobreposicao">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Gatilhos dos Modais</h3>
+                                            <p>Clique nos botões abaixo para abrir os diferentes tipos de modais.</p>
 
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPadrao">
+                                                    Modal Padrão
+                                                </button>
+
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPequeno">
+                                                    Pequeno (sm)
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalGrande">
+                                                    Grande (lg)
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalExtraGrande">
+                                                    Extra Grande (xl)
+                                                </button>
+
+                                                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalCentralizado">
+                                                    Centralizado
+                                                </button>
+
+                                                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalComRolagem">
+                                                    Com Rolagem
+                                                </button>
+                                                
+                                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEstatico">
+                                                    Backdrop Estático
+                                                </button>
+
+                                                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalFullscreen">
+                                                    Tela Cheia (Fullscreen)
+                                                </button>
+                                            </div>
+
+                                            <div class="modal fade" id="modalPadrao" tabindex="-1" aria-labelledby="modalPadraoLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="modalPadraoLabel">Modal Padrão</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Este é um modal padrão.
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                            <button type="button" class="btn btn-primary">Salvar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal fade" id="modalPequeno" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Modal Pequeno</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div></div></div></div>
+                                            <div class="modal fade" id="modalGrande" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Modal Grande</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div></div></div></div>
+                                            <div class="modal fade" id="modalExtraGrande" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-xl"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Modal Extra Grande</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div></div></div></div>
+
+                                            <div class="modal fade" id="modalCentralizado" tabindex="-1" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header"><h5 class="modal-title">Modal Centralizado</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal fade" id="modalComRolagem" tabindex="-1" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header"><h5 class="modal-title">Modal com Rolagem</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                                                        <div class="modal-body">
+                                                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal fade" id="modalEstatico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header"><h5 class="modal-title">Modal Estático</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                                                        <div class="modal-body"><p>Tente clicar fora deste modal. Ele não fechará.</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="modal fade" id="modalFullscreen" tabindex="-1" aria-hidden="true">
+                                                <div class="modal-dialog modal-fullscreen">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header"><h5 class="modal-title">Modal Tela Cheia</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                                                        <div class="modal-body"><p>Este modal ocupa toda a tela.</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2350,7 +2587,106 @@
                                 </h2>
                                 <div id="collapseOffcanvas" class="accordion-collapse collapse" data-bs-parent="#accordion-sobreposicao">
                                     <div class="accordion-body">
-                                    
+                                        <div>
+                                            <h3 class="mb-3">Gatilhos do Offcanvas</h3>
+                                            <p>Clique nos botões para abrir os painéis laterais com diferentes configurações.</p>
+
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEsquerda">
+                                                    Abrir da Esquerda
+                                                </button>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDireita">
+                                                    Abrir da Direita
+                                                </button>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopo">
+                                                    Abrir do Topo
+                                                </button>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBase">
+                                                    Abrir da Base
+                                                </button>
+
+                                                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasComRolagem">
+                                                    Com Rolagem de Fundo
+                                                </button>
+                                                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSemBackdrop">
+                                                    Sem Backdrop
+                                                </button>
+                                                <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEstatico">
+                                                    Backdrop Estático
+                                                </button>
+                                            </div>
+
+                                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasEsquerda">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Offcanvas da Esquerda</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Este painel desliza a partir da esquerda da tela.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDireita">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Offcanvas da Direita</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Este painel desliza a partir da direita da tela.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopo">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Offcanvas do Topo</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Este painel desliza a partir do topo da tela.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBase">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Offcanvas da Base</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Este painel desliza a partir da base da tela.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasComRolagem">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Com Rolagem</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Você pode rolar a página atrás de mim.</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasSemBackdrop">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Sem Backdrop</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Não há fundo escurecido e a página principal permanece interativa.</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="offcanvasEstatico">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title">Backdrop Estático</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div>Você não pode me fechar clicando fora. Use o botão 'X' ou a tecla Esc.</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2375,7 +2711,63 @@
                                 </h2>
                                 <div id="collapse-Placeholders" class="accordion-collapse collapse" data-bs-parent="#accordion-carregamento">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">1. Largura e Cores</h3>
+                                            <p>
+                                                <span class="placeholder col-6"></span>
+                                                <span class="placeholder col-8"></span>
+                                            </p>
+                                            <p>
+                                                <span class="placeholder col-4 bg-primary"></span>
+                                                <span class="placeholder col-6 bg-success"></span>
+                                            </p>
 
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">2. Tamanhos</h3>
+                                            <p>
+                                                <span class="placeholder placeholder-lg col-4"></span>
+                                                <span class="placeholder col-4"></span>
+                                                <span class="placeholder placeholder-sm col-4"></span>
+                                                <span class="placeholder placeholder-xs col-4"></span>
+                                            </p>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">3. Animações</h3>
+                                            <p>
+                                                <span class="placeholder-glow">
+                                                    <span class="placeholder col-12"></span>
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <span class="placeholder-wave">
+                                                    <span class="placeholder col-12"></span>
+                                                </span>
+                                            </p>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">4. Exemplo Prático (Card)</h3>
+                                            <p>A combinação das variações para simular o carregamento de um componente complexo.</p>
+                                            <div class="card" aria-hidden="true">
+                                                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                                                <div class="card-body">
+                                                    <h5 class="card-title placeholder-glow">
+                                                        <span class="placeholder col-6"></span>
+                                                    </h5>
+                                                    <p class="card-text placeholder-glow">
+                                                        <span class="placeholder col-7"></span>
+                                                        <span class="placeholder col-4"></span>
+                                                        <span class="placeholder col-4"></span>
+                                                        <span class="placeholder col-6"></span>
+                                                        <span class="placeholder col-8"></span>
+                                                    </p>
+                                                    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
