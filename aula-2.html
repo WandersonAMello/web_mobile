@@ -1526,7 +1526,67 @@
                                 </h2>
                                 <div id="collapse-card" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div class="d-flex flex-wrap justify-content-center gap-4">
 
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="https://placehold.co/600x400/007bff/white?text=Imagem" class="card-img-top" alt="Imagem de topo">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Título do Card</h5>
+                                                    <p class="card-text">Um exemplo de texto rápido para construir sobre o título do card e compor o grosso do conteúdo do card.</p>
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">Item 1 da Lista</li>
+                                                    <li class="list-group-item">Item 2 da Lista</li>
+                                                    <li class="list-group-item">Item 3 da Lista (Desativado)</li>
+                                                </ul>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-link">Link do Card</a>
+                                                    <a href="#" class="card-link">Outro link</a>
+                                                </div>
+                                                <div class="card-footer text-body-secondary">
+                                                    Rodapé do Card
+                                                </div>
+                                            </div>
+
+                                            <div class="card text-center" style="width: 18rem;">
+                                                <div class="card-header">
+                                                    Cabeçalho
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card com Header e Footer</h5>
+                                                    <p class="card-text">Este card foca na estrutura de blocos, com áreas bem definidas para cabeçalho e rodapé.</p>
+                                                    <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                                                </div>
+                                                <div class="card-footer text-body-secondary">
+                                                    Atualizado há 2 dias
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card text-bg-dark" style="width: 18rem;">
+                                                <img src="https://placehold.co/600x400/343a40/white?text=Fundo" class="card-img" alt="Imagem de fundo">
+                                                <div class="card-img-overlay">
+                                                    <h5 class="card-title">Título Sobre a Imagem</h5>
+                                                    <p class="card-text">Este é um texto de suporte mais longo. Seu conteúdo é um pouco maior, ideal para descrições sobre a imagem.</p>
+                                                    <p class="card-text"><small>Última atualização 3 mins atrás</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card" style="max-width: 540px;">
+                                                <div class="row g-0">
+                                                    <div class="col-md-4">
+                                                        <img src="https://placehold.co/400x600/28a745/white?text=Vertical" class="img-fluid rounded-start" alt="Imagem lateral">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Card Horizontal</h5>
+                                                            <p class="card-text">Esta é uma estrutura diferente, onde a imagem fica ao lado do conteúdo, ideal para itens de lista ou artigos.</p>
+                                                            <p class="card-text"><small class="text-body-secondary">Perfeito para catálogos</small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1539,7 +1599,85 @@
                                 </h2>
                                 <div id="collapse-accordion" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div>
 
+                                            <h3 class="mb-3">Exemplo 1: Accordion Padrão</h3>
+                                            <p>Apenas um item pode ser aberto por vez, graças ao atributo <code>data-bs-parent</code>.</p>
+                                            
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            <strong>Item #1: O que é um Accordion?</strong>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            Um accordion é um componente de interface que permite exibir e ocultar seções de conteúdo. É extremamente útil para organizar grandes volumes de informação em uma página de forma compacta, como em seções de FAQ (Perguntas Frequentes), menus de navegação ou formulários com várias etapas.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTwo">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            <strong>Item #2: Como funciona no Bootstrap?</strong>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            Ele é construído com o plugin "Collapse" do JavaScript do Bootstrap. Cada item (<code>.accordion-item</code>) consiste em um cabeçalho (<code>.accordion-header</code>) e um corpo (<code>.accordion-collapse</code>). O botão dentro do cabeçalho controla a visibilidade do corpo correspondente através dos atributos <code>data-bs-target</code> (que aponta para o ID do corpo) e <code>aria-controls</code>.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingThree">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            <strong>Item #3: Conteúdo Personalizado</strong>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            Você pode inserir qualquer tipo de conteúdo HTML dentro do <code>.accordion-body</code>, como listas, imagens, parágrafos e até mesmo outros componentes do Bootstrap.
+                                                            <ul>
+                                                                <li>Listas</li>
+                                                                <li>Tabelas</li>
+                                                                <li>Imagens</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Accordion Flush</h3>
+                                            <p>A classe <code>.accordion-flush</code> remove as bordas externas e o arredondamento, fazendo com que o accordion se integre perfeitamente ao seu contêiner pai.</p>
+
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                            Item Flush #1
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">O conteúdo do primeiro item do accordion flush aparece aqui. Note a ausência de bordas externas.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                            Item Flush #2
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">Conteúdo do segundo item. Esta variação é ideal para ser usada dentro de outros componentes, como cards ou modais.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1552,7 +1690,76 @@
                                 </h2>
                                 <div id="collapse-collapse" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: Collapse Básico</h3>
+                                            <p>
+                                                Um gatilho (botão ou link) controla a visibilidade de um bloco de conteúdo.
+                                            </p>
 
+                                            <p>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                    Ativar com &lt;button&gt;
+                                                </button>
+                                                
+                                                <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                    Ativar com &lt;a&gt;
+                                                </a>
+                                            </p>
+                                            
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="card card-body">
+                                                    Este é o conteúdo que é exibido ou ocultado. Você pode colocar qualquer elemento HTML aqui dentro, como texto, imagens, ou até mesmo outros componentes do Bootstrap. A transição de abertura e fechamento é animada.
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Múltiplos Alvos</h3>
+                                            <p>
+                                                Um único gatilho pode controlar a visibilidade de múltiplos elementos ao mesmo tempo.
+                                            </p>
+                                            <p>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                                    Ativar/Desativar Ambos
+                                                </button>
+                                            </p>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                                        <div class="card card-body">
+                                                            Primeiro elemento. Este bloco é controlado pelo botão acima, pois possui a classe <code>.multi-collapse</code>.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                        <div class="card card-body">
+                                                            Segundo elemento. Este também é controlado pelo mesmo botão, compartilhando a mesma classe de alvo.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <hr class="my-5">
+                                            
+                                            <h3 class="mb-3">Exemplo 3: Collapse Horizontal</h3>
+                                            <p>
+                                                A transição pode ocorrer na horizontal em vez de na vertical. Requer que o elemento filho direto tenha uma largura (<code>width</code>) definida.
+                                            </p>
+                                            <p>
+                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHorizontalExample" aria-expanded="false" aria-controls="collapseHorizontalExample">
+                                                    Ativar Collapse Horizontal
+                                                </button>
+                                            </p>
+                                            <div>
+                                                <div class="collapse collapse-horizontal" id="collapseHorizontalExample">
+                                                    <div class="card card-body" style="width: 300px;">
+                                                        Este é um conteúdo colapsável que se expande horizontalmente. É crucial definir a largura no elemento filho.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1565,7 +1772,74 @@
                                 </h2>
                                 <div id="collapse-carousel" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: Carousel Completo (com Indicadores, Controles e Legendas)</h3>
+                                            <div id="carouselExemploCompleto" class="carousel slide" data-bs-ride="carousel">
+                                                
+                                                <div class="carousel-indicators">
+                                                    <button type="button" data-bs-target="#carouselExemploCompleto" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                    <button type="button" data-bs-target="#carouselExemploCompleto" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                    <button type="button" data-bs-target="#carouselExemploCompleto" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                </div>
 
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="https://placehold.co/1200x400/007bff/white?text=Primeiro+Slide" class="d-block w-100" alt="Primeiro slide">
+                                                        <div class="carousel-caption d-none d-md-block">
+                                                            <h5>Título do Primeiro Slide</h5>
+                                                            <p>Algum conteúdo representativo para o primeiro slide.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="https://placehold.co/1200x400/6c757d/white?text=Segundo+Slide" class="d-block w-100" alt="Segundo slide">
+                                                        <div class="carousel-caption d-none d-md-block">
+                                                            <h5>Título do Segundo Slide</h5>
+                                                            <p>Algum conteúdo representativo para o segundo slide.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="https://placehold.co/1200x400/28a745/white?text=Terceiro+Slide" class="d-block w-100" alt="Terceiro slide">
+                                                        <div class="carousel-caption d-none d-md-block">
+                                                            <h5>Título do Terceiro Slide</h5>
+                                                            <p>Algum conteúdo representativo para o terceiro slide.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExemploCompleto" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Anterior</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExemploCompleto" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Próximo</span>
+                                                </button>
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Variação com Efeito "Fade" e Tema "Dark"</h3>
+                                            <p>Use <code>.carousel-fade</code> para a animação de transição e <code>.carousel-dark</code> para otimizar os controles em imagens de fundo claras.</p>
+                                            <div id="carouselExemploFade" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="https://placehold.co/1200x400/f8f9fa/343a40?text=Slide+Claro+1" class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="https://placehold.co/1200x400/e9ecef/343a40?text=Slide+Claro+2" class="d-block w-100" alt="...">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExemploFade" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Anterior</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExemploFade" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Próximo</span>
+                                                </button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1578,7 +1852,86 @@
                                 </h2>
                                 <div id="collapse-list-group" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: List Group Básico</h3>
+                                            <ul class="list-group" style="max-width: 400px;">
+                                                <li class="list-group-item">Um item básico da lista</li>
+                                                <li class="list-group-item">Um segundo item</li>
+                                                <li class="list-group-item active" aria-current="true">Um terceiro item (ativo)</li>
+                                                <li class="list-group-item">Um quarto item</li>
+                                                <li class="list-group-item disabled" aria-disabled="true">Um quinto item (desativado)</li>
+                                            </ul>
 
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: List Group com Links e Botões</h3>
+                                            <p>Use <code>&lt;div&gt;</code> como contêiner e <code>&lt;a&gt;</code> ou <code>&lt;button&gt;</code> como itens para criar uma lista de ações.</p>
+                                            <div class="list-group" style="max-width: 400px;">
+                                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                                    Link ativo
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">Link padrão</a>
+                                                <button type="button" class="list-group-item list-group-item-action">Botão</button>
+                                                <a href="#" class="list-group-item list-group-item-action disabled">Link desativado</a>
+                                            </div>
+
+                                            <hr class="my-5">
+                                            
+                                            <h3 class="mb-3">Exemplo 3: Variação "Flush" e com Badges</h3>
+                                            <p>A classe <code>.list-group-flush</code> remove as bordas externas. Ideal para usar dentro de Cards.</p>
+                                            <ul class="list-group list-group-flush" style="max-width: 400px;">
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    Caixa de Entrada
+                                                    <span class="badge bg-primary rounded-pill">14</span>
+                                                </li>
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    Spam
+                                                    <span class="badge bg-warning rounded-pill">2</span>
+                                                </li>
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    Lixeira
+                                                    <span class="badge bg-danger rounded-pill">1</span>
+                                                </li>
+                                            </ul>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 4: Cores contextuais</h3>
+                                            <ul class="list-group" style="max-width: 400px;">
+                                                <li class="list-group-item">Item padrão</li>
+                                                <li class="list-group-item list-group-item-primary">Um item de ação primária</li>
+                                                <li class="list-group-item list-group-item-secondary">Um item de ação secundária</li>
+                                                <li class="list-group-item list-group-item-success">Um item de sucesso</li>
+                                                <li class="list-group-item list-group-item-danger">Um item de perigo</li>
+                                                <li class="list-group-item list-group-item-warning">Um item de aviso</li>
+                                                <li class="list-group-item list-group-item-info">Um item de informação</li>
+                                                <li class="list-group-item list-group-item-light">Um item claro (light)</li>
+                                                <li class="list-group-item list-group-item-dark">Um item escuro (dark)</li>
+                                            </ul>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 5: Conteúdo Personalizado</h3>
+                                            <div class="list-group" style="max-width: 500px;">
+                                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">Título da lista com conteúdo</h5>
+                                                        <small>3 dias atrás</small>
+                                                    </div>
+                                                    <p class="mb-1">Algum conteúdo de placeholder em um parágrafo.</p>
+                                                    <small>E um texto de rodapé mais discreto.</small>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <h5 class="mb-1">Outro item da lista</h5>
+                                                        <small class="text-body-secondary">1 semana atrás</small>
+                                                    </div>
+                                                    <p class="mb-1">Conteúdo para o segundo item, mostrando como você pode estruturar informações complexas.</p>
+                                                    <small class="text-body-secondary">Utilize as classes de utilitários do Flexbox para alinhar.</small>
+                                                </a>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1591,7 +1944,51 @@
                                 </h2>
                                 <div id="collapse-popovers" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 p-4">
 
+                                            <button type="button" 
+                                                class="btn btn-lg btn-danger" 
+                                                data-bs-toggle="popover" 
+                                                data-bs-title="Este é o Título" 
+                                                data-bs-content="E aqui está um conteúdo incrível. É muito envolvente, certo?">
+                                                Popover Básico
+                                            </button>
+
+                                            <hr class="w-100">
+
+                                            <h4 class="w-100 text-center mb-0">Exemplos de Posicionamento</h4>
+                                            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Popover no topo.">
+                                                Popover no Topo
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Popover à direita.">
+                                                Popover à Direita
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Popover embaixo.">
+                                                Popover Embaixo
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Popover à esquerda.">
+                                                Popover à Esquerda
+                                            </button>
+                                            
+                                            <hr class="w-100">
+                                            
+                                            <a tabindex="0" 
+                                                class="btn btn-lg btn-success" 
+                                                role="button" 
+                                                data-bs-toggle="popover" 
+                                                data-bs-trigger="focus" 
+                                                data-bs-title="Popover Dispensável" 
+                                                data-bs-content="Este popover será fechado quando você clicar em qualquer outro lugar na página.">
+                                                Dispensável ao Focar
+                                            </a>
+                                            
+                                            <hr class="w-100">
+                                            
+                                            <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Popover em botão desativado">
+                                                <button class="btn btn-primary" type="button" disabled>Botão Desativado</button>
+                                            </span>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1604,7 +2001,34 @@
                                 </h2>
                                 <div id="collapse-tooltips" class="accordion-collapse collapse" data-bs-parent="#accordion-exibicao">
                                     <div class="accordion-body">
+                                        <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 p-4">
 
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip no topo">
+                                                Tooltip no Topo
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip na direita">
+                                                Tooltip na Direita
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip embaixo">
+                                                Tooltip Embaixo
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip na esquerda">
+                                                Tooltip na Esquerda
+                                            </button>
+
+                                            <hr class="w-100">
+
+                                            <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>Tooltip</em> <u>com</u> <b>HTML</b>">
+                                                Tooltip com HTML
+                                            </button>
+
+                                            <hr class="w-100">
+
+                                            <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Tooltip no botão desativado">
+                                                <button class="btn btn-primary" type="button" disabled>Botão Desativado</button>
+                                            </span>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1629,7 +2053,89 @@
                                 </h2>
                                 <div id="collapse-alerts" class="accordion-collapse collapse" data-bs-parent="#accordion-feedback">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: Alertas Contextuais</h3>
+                                            <p>Use as classes <code>.alert-{color}</code> para definir a aparência do alerta.</p>
 
+                                            <div class="alert alert-primary" role="alert">
+                                                Um simples alerta primário—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-secondary" role="alert">
+                                                Um simples alerta secundário—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-success" role="alert">
+                                                Um simples alerta de sucesso—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-danger" role="alert">
+                                                Um simples alerta de perigo—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-warning" role="alert">
+                                                Um simples alerta de aviso—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-info" role="alert">
+                                                Um simples alerta de informação—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-light" role="alert">
+                                                Um simples alerta claro (light)—dê uma olhada!
+                                            </div>
+                                            <div class="alert alert-dark" role="alert">
+                                                Um simples alerta escuro (dark)—dê uma olhada!
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Conteúdo Adicional e Links</h3>
+                                            <p>Você pode adicionar cabeçalhos com <code>.alert-heading</code> e links estilizados com <code>.alert-link</code>.</p>
+                                            <div class="alert alert-success" role="alert">
+                                                <h4 class="alert-heading">Muito bem!</h4>
+                                                <p>Você concluiu esta tarefa importante com sucesso. Todos os dados foram processados e salvos em nosso sistema.</p>
+                                                <hr>
+                                                <p class="mb-0">Sempre que precisar, você pode verificar os resultados clicando neste <a href="#" class="alert-link">link de relatório</a>.</p>
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 3: Alerta Dispensável (Dismissing)</h3>
+                                            <p>Adicione a classe <code>.alert-dismissible</code> e um botão com <code>data-bs-dismiss="alert"</code>. <strong>Requer JavaScript.</strong></p>
+
+                                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                <strong>Atenção!</strong> Você deveria verificar alguns campos abaixo.
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                            <div>
+                                                <h3 class="mb-3">Variação Adicional: Alertas com Ícones</h3>
+                                                <p>Use utilitários Flexbox (<code>.d-flex</code>, <code>.align-items-center</code>) e um SVG para adicionar ícones.</p>
+
+                                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Success:">
+                                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                                    </svg>
+                                                    <div>
+                                                        Um exemplo de alerta de sucesso com um ícone.
+                                                    </div>
+                                                </div>
+
+                                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                                    </svg>
+                                                    <div>
+                                                        Um exemplo de alerta de aviso com um ícone.
+                                                    </div>
+                                                </div>
+
+                                                <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show" role="alert">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-octagon-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Danger:">
+                                                        <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                                    </svg>
+                                                    <div>
+                                                        Um alerta de perigo dispensável e com ícone.
+                                                    </div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1642,7 +2148,68 @@
                                 </h2>
                                 <div id="collapse-badge" class="accordion-collapse collapse" data-bs-parent="#accordion-feedback">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: Badges em Cabeçalhos</h3>
+                                            <p>Os Badges se adaptam ao tamanho da fonte do elemento pai.</p>
 
+                                            <h1>Cabeçalho Exemplo <h1><span class="badge bg-secondary">Novo</span></h1>
+                                            <h2>Cabeçalho Exemplo <h2><span class="badge bg-secondary">Novo</span></h2>
+                                            <h3>Cabeçalho Exemplo <h3><span class="badge bg-secondary">Novo</span></h3>
+                                            <h4>Cabeçalho Exemplo <h4><span class="badge bg-secondary">Novo</span></h4>
+                                            <h5>Cabeçalho Exemplo <h5><span class="badge bg-secondary">Novo</span></h5>
+                                            <h6>Cabeçalho Exemplo <h6><span class="badge bg-secondary">Novo</span></h6>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Badges Contextuais e Estilo "Pill"</h3>
+                                            <p>Use as classes de background <code>.bg-{color}</code> para definir a cor.</p>
+
+                                            <span class="badge bg-primary">Primary</span>
+                                            <span class="badge bg-secondary">Secondary</span>
+                                            <span class="badge bg-success">Success</span>
+                                            <span class="badge bg-danger">Danger</span>
+                                            <span class="badge bg-warning text-dark">Warning</span>
+                                            <span class="badge bg-info text-dark">Info</span>
+                                            <span class="badge bg-light text-dark">Light</span>
+                                            <span class="badge bg-dark">Dark</span>
+
+                                            <h4 class="mt-4">Estilo "Pill"</h4>
+                                            <p>Use a classe <code>.rounded-pill</code> para deixá-los arredondados.</p>
+
+                                            <span class="badge rounded-pill bg-primary">Primary</span>
+                                            <span class="badge rounded-pill bg-secondary">Secondary</span>
+                                            <span class="badge rounded-pill bg-success">Success</span>
+                                            <span class="badge rounded-pill bg-danger">Danger</span>
+                                            <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+                                            <span class="badge rounded-pill bg-info text-dark">Info</span>
+                                            <span class="badge rounded-pill bg-light text-dark">Light</span>
+                                            <span class="badge rounded-pill bg-dark">Dark</span>
+                                            
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 3: Contadores em Botões</h3>
+                                            <p>Um uso muito comum é para indicar notificações.</p>
+                                            
+                                            <button type="button" class="btn btn-primary position-relative me-3">
+                                                Caixa de Entrada
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    99+
+                                                    <span class="visually-hidden">mensagens não lidas</span>
+                                                </span>
+                                            </button>
+                                            
+                                            <button type="button" class="btn btn-dark position-relative">
+                                                Perfil
+                                                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                                                    <span class="visually-hidden">Novo alerta</span>
+                                                </span>
+                                            </button>
+                                            <div>
+                                                <h3 class="mb-3">Variação Adicional: Badges como Links</h3>
+                                                <a href="#" class="badge bg-primary text-decoration-none">Link Primário</a>
+                                                <a href="#" class="badge rounded-pill bg-success text-decoration-none">Link em Pill</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1655,7 +2222,71 @@
                                 </h2>
                                 <div id="collapse-progress" class="accordion-collapse collapse" data-bs-parent="#accordion-feedback">
                                     <div class="accordion-body">
+                                        <div>
+                                            <h3 class="mb-3">Exemplo 1: Barra de Progresso Básica e com Rótulo</h3>
+                                            <p>A largura é definida via estilo inline (<code>style="width: ...%"</code>) e atributos ARIA.</p>
+                                            
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo básico" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo básico" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" style="width: 25%"></div>
+                                            </div>
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo básico" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" style="width: 50%"></div>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Exemplo com rótulo" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" style="width: 75%">75%</div>
+                                            </div>
 
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 2: Cores Contextuais</h3>
+                                            <p>Use as classes de background <code>.bg-{color}</code> na <code>.progress-bar</code>.</p>
+
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo de sucesso" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-success" style="width: 25%"></div>
+                                            </div>
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo de informação" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-info" style="width: 50%"></div>
+                                            </div>
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo de aviso" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Exemplo de perigo" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 100%"></div>
+                                            </div>
+                                            
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 3: Estilos Listrado e Animado</h3>
+                                            <p>Use <code>.progress-bar-striped</code> e <code>.progress-bar-animated</code>.</p>
+
+                                            <div class="progress mb-3" role="progressbar" aria-label="Exemplo listrado" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-striped" style="width: 60%"></div>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Exemplo listrado e animado" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                                            </div>
+
+                                            <hr class="my-5">
+
+                                            <h3 class="mb-3">Exemplo 4: Barras Empilhadas (Stacked)</h3>
+                                            <p>Coloque múltiplas barras dentro de um mesmo <code>.progress</code>.</p>
+                                            
+                                            <div class="progress-stacked">
+                                                <div class="progress" role="progressbar" aria-label="Segmento um" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                    <div class="progress-bar">15%</div>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Segmento dois" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                                    <div class="progress-bar bg-success">30%</div>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Segmento três" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                    <div class="progress-bar bg-danger">20%</div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1752,6 +2383,15 @@
                 </div>
             </div>
         </div>
+        <script>
 
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+            // Seleciona todos os elementos que têm o atributo data-bs-toggle="popover"
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+            
+            // Cria uma instância de Popover para cada elemento encontrado
+            const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+        </script>
     </body>
 </html>
