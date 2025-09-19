@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from django.http import HttpResponse
-from django.shortcuts import render
+
+from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
 
@@ -25,6 +25,7 @@ class Login(View):
             #verifica se o usuário está ativo no sistema
             if user.is_active:
                 login(request, user)
-                return HttpResponse('Usuário autenticado com sucesso')
+                return redirect('/veiculo')  # Redireciona para a página de veículos após o login bem-sucedido
+
             
         return render(request, 'autenticacao.html', {'mensagem': 'Login invalido!'})
