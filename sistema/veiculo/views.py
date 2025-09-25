@@ -14,4 +14,4 @@ class ListarVeiculos(ListView):
     def get_queryset(self):
         """ Retorna a lista de veículos do ano atual."""
         data_atual = datetime.now()
-        return Veiculo.objects.filter(ano=data_atual.year) #para modificar o filtro, altere aqui
+        return Veiculo.objects.all() #para modificar o filtro, altere aqui
