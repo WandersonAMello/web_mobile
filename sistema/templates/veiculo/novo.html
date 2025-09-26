@@ -3,45 +3,59 @@
 {% block titulo %}Cadastro de novos veiculos{% endblock %}
 
 {% block conteudo %}
-<div class="container">
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <h2 class="text-center mb-4">Cadastro de Novo Veículo</h2>
+            <form action="/veiculo/novo/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <fieldset class="border p-3 mb-3">
+                            <legend class="w-auto px-2">Dados do Veículo</legend>
+                            <div class="form-group mb-3">
+                                <label for="marca" class="form-label">Marca</label>
+                                <div>
+                                {{ form.marca }}
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="modelo" class="form-label">Modelo</label>
+                                <div>{{ form.modelo }}</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="ano" class="form-label">Ano</label>
+                                <div>{{ form.ano }}</div>
+                            </div>
+                        </fieldset>
+                    </div>
 
-<form action="/veiculo/novo/" method="post" enctype="multipart/form-data">
-    {%csrf_token %}
-    <div class="row">
-        <div class="col-6">
-            <div class="container" id="campos">
-            <div class="form-group">
-                <label for="marca" class="form-label">Marca</label>
-                {{form.marca}}
-            </div>
-            <div class="form-group">
-                <label for="modelo" class="form-label">Modelo</label>
-                {{form.modelo}}
-            </div>
-            <div class="form-group">
-                <label for="ano" class="form-label">Ano</label>
-                {{form.ano}}
-            </div>
+                    <div class="col-md-6">
+                        <fieldset class="border p-3 mb-3">
+                            <legend class="w-auto px-2">Detalhes</legend>
+                            <div class="form-group mb-3">
+                                <label for="cor" class="form-label">Cor</label>
+                                <div>{{ form.cor }}</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="combustivel" class="form-label">Combustível</label>
+                                <div>{{ form.combustivel }}</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="foto" class="form-label">Foto</label>
+                                {{ form.foto }}
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Cadastrar Veículo</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="col-6">
-            <div class="form-group">
-                <label for="cor" class="form-label">Cor</label>
-                {{form.cor}}
-            </div>
-            <div class="form-group">
-                <label for="Combustivel" class="form-label">Combustivel</label>
-                {{form.combustivel}}
-            </div>
-            <div class="form-group">
-                <label for="foto" class="form-label">Foto</label>
-                {{form.image}}
-            </div>
-        </div>
-            </div>
-            
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
-    
-</form>
 </div>
 {% endblock %}

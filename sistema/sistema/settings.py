@@ -126,3 +126,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_URL = '/'  # Define a URL de login para redirecionamento de usuários não autenticados
+
+
+# Diretório onde os arquivos de mídia serão salvos
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

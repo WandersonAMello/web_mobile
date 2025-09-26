@@ -8,3 +8,4 @@ class Veiculo(models.Model):
     ano = models.IntegerField()
     cor = models.SmallIntegerField(choices=OPCOES_CORES)
     combustivel = models.SmallIntegerField(choices=OPCOES_COMBUSTIVEIS)
+    foto = models.ImageField(upload_to='fotos_veiculos/', blank=True, null=True)
