@@ -10,7 +10,10 @@ class Login(View):
     """
     def get(self, request):
         contexto = {}
-        return render(request, 'autenticacao.html', contexto)
+        if request.user.is_authenticated:
+            return redirect('/veiculo')  # Redireciona para a página de veículos se o usuário já estiver autenticado
+        else:
+            return render(request, 'autenticacao.html', contexto)
     
     def post(self, request):
         
@@ -29,3 +32,11 @@ class Login(View):
 
             
         return render(request, 'autenticacao.html', {'mensagem': 'Login invalido!'})
+    
+class Logout(View):
+    """
+    Class-based view para logout de usuários.
+    """
+    def get(self, request):
+        logout(request)
+        return redirect('/')  # Redireciona para a rota inicial após o logout

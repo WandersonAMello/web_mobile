@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from sistema.views import Login
+from sistema.views import Login, Logout
 
 urlpatterns = [
     path('', Login.as_view(), name='Login'), #redireciona a url raiz para a view de login
+    path('logout/', Logout.as_view(), name='Logout'), #redireciona a url /logout para a view de logout
     path('admin/', admin.site.urls), #redireciona todas as urls /admin para o admin do django
     path('veiculo/', include('veiculo.urls'), name='veiculo'), #redireciona todas as urls /veiculo para o app veiculo
     

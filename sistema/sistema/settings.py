@@ -123,3 +123,6 @@ STATICFILES_DIRS = [BASE_DIR / 'sistema/static']
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_URL = '/'  # Define a URL de login para redirecionamento de usuários não autenticados
