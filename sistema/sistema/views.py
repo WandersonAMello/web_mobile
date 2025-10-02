@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from django.http import HttpResponse
-from django.shortcuts import render
+
+from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
 
@@ -10,7 +10,10 @@ class Login(View):
     """
     def get(self, request):
         contexto = {}
-        return render(request, 'autenticacao.html', contexto)
+        if request.user.is_authenticated:
+            return redirect('/veiculo')  # Redireciona para a página de veículos se o usuário já estiver autenticado
+        else:
+            return render(request, 'autenticacao.html', contexto)
     
     def post(self, request):
         
@@ -25,6 +28,15 @@ class Login(View):
             #verifica se o usuário está ativo no sistema
             if user.is_active:
                 login(request, user)
-                return HttpResponse('Usuário autenticado com sucesso')
+                return redirect('/veiculo')  # Redireciona para a página de veículos após o login bem-sucedido
+
             
         return render(request, 'autenticacao.html', {'mensagem': 'Login invalido!'})
+    
+class Logout(View):
+    """
+    Class-based view para logout de usuários.
+    """
+    def get(self, request):
+        logout(request)
+        return redirect('/')  # Redireciona para a rota inicial após o logout

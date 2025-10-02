@@ -15,10 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from sistema.views import Login
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
+from sistema.views import Login, Logout
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', Login.as_view(), name='Login')
+    path('', Login.as_view(), name='Login'), #redireciona a url raiz para a view de login
+    path('logout/', Logout.as_view(), name='Logout'), #redireciona a url /logout para a view de logout
+    path('admin/', admin.site.urls), #redireciona todas as urls /admin para o admin do django
+    path('veiculo/', include('veiculo.urls'), name='veiculo'), #redireciona todas as urls /veiculo para o app veiculo
+    
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
