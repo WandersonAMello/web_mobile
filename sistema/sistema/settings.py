@@ -129,5 +129,6 @@ LOGIN_URL = '/'  # Define a URL de login para redirecionamento de usuários não
 
 
 # Diretório onde os arquivos de mídia serão salvos
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# dessa forma não trata de segurança, apenas de organização dos arquivos
+#MEDIA_URL = '/media/'
+#MEDIA_ROOT = BASE_DIR / 'media'
