@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from veiculo.models import Veiculo
 from veiculo.forms import FormularioVeiculo
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.http import FileResponse, Http404
 from django.views.generic import View
 from django.core.exceptions import ObjectDoesNotExist
+
 
 class ListarVeiculos(LoginRequiredMixin, ListView): #herda de LoginRequiredMixin para exigir autenticação
     """
@@ -43,3 +44,12 @@ class FotoVeiculo(View):
             raise Http404("Foto não encontrada ou acesso negado")
         except Exception as exeption:
             raise exeption
+        
+class EditarVeiculos(LoginRequiredMixin, UpdateView):
+    """
+    View para editar um veículo existente.
+    """
+    model = Veiculo
+    form_class = FormularioVeiculo
+    template_name = 'veiculo/editar.html'
+    success_url = reverse_lazy('listar-veiculos') #redireciona para a lista de veículos após editar um veículo

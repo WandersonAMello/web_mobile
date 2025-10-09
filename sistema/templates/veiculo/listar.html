@@ -33,7 +33,7 @@
                     <h5 class="card-title">{{ veiculo.get_marca_display }}</h5>
                     <p class="card-text">{{ veiculo.modelo }} - ano {{ veiculo.ano }} - cor {{ veiculo.get_cor_display }}</p>
                     <div class="mt-3">
-                        <a href="#" class="btn btn-primary me-2">
+                        <a href="/veiculo/editar/{{ veiculo.id }}" class="btn btn-primary me-2">
                             <i class="fas fa-edit"></i>
                         </a>
                         <a href="#" class="btn btn-danger">
