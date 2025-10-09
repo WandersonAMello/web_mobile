@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from veiculo.models import Veiculo
 from veiculo.forms import FormularioVeiculo
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -32,6 +32,25 @@ class CriarVeiculos(LoginRequiredMixin, CreateView):
     template_name = 'veiculo/novo.html'
     success_url = reverse_lazy('listar-veiculos') #redireciona para a lista de veículos após criar um novo veículo
 
+
+class EditarVeiculos(LoginRequiredMixin, UpdateView):
+    """
+    View para editar um veículo existente.
+    """
+    model = Veiculo
+    form_class = FormularioVeiculo
+    template_name = 'veiculo/editar.html'
+    success_url = reverse_lazy('listar-veiculos') #redireciona para a lista de veículos após editar um veículo
+    
+class DeletarVeiculos(LoginRequiredMixin, DeleteView):
+    """
+    View para deletar um veículo existente.
+    """
+    model = Veiculo
+    template_name = 'veiculo/deletar.html'
+    success_url = reverse_lazy('listar-veiculos') #redireciona para a lista de veículos após deletar um veículo
+    
+
 class FotoVeiculo(View):
     """
     View para retornar a foto dos veiculos.
@@ -45,11 +64,3 @@ class FotoVeiculo(View):
         except Exception as exeption:
             raise exeption
         
-class EditarVeiculos(LoginRequiredMixin, UpdateView):
-    """
-    View para editar um veículo existente.
-    """
-    model = Veiculo
-    form_class = FormularioVeiculo
-    template_name = 'veiculo/editar.html'
-    success_url = reverse_lazy('listar-veiculos') #redireciona para a lista de veículos após editar um veículo
