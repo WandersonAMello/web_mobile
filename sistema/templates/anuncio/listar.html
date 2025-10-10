@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Lista de Anúncios{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Anúncios Ativos</h2>
+        <a href="/anuncio/novo/" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Novo Anúncio
+        </a>
+    </div>
+
+    {% if lista_anuncios %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for anuncio in lista_anuncios %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                {% if anuncio.veiculo.foto %}
+                    <img src="{{ anuncio.veiculo.foto.url }}" class="card-img-top" alt="Foto de {{ anuncio.veiculo.modelo }}">
+                {% else %}
+                    <div class="card-header text-muted text-center py-5">
+                        Veículo sem foto
+                    </div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ anuncio.titulo }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ anuncio.veiculo.modelo }} - {{ anuncio.veiculo.get_marca_display }}</h6>
+                    <p class="card-text">{{ anuncio.descricao|truncatewords:20 }}</p>
+                    <h4 class="text-success">R$ {{ anuncio.preco }}</h4>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/anuncio/editar/{{ anuncio.pk }}/" class="btn btn-primary me-2">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal{{ anuncio.id }}">
+                        <i class="fas fa-trash-alt"></i> Excluir
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="confirmDeleteModal{{ anuncio.id }}" tabindex="-1" aria-labelledby="modalLabel{{ anuncio.id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel{{ anuncio.id }}">Confirmar Exclusão</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza que deseja excluir o anúncio: <strong>{{ anuncio.titulo }}</strong>?
+                        <p class="text-danger mt-2">Esta ação não pode ser desfeita.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <form action="/anuncio/deletar/{{ anuncio.pk }}/" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info text-center" role="alert">
+        Nenhum anúncio encontrado.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

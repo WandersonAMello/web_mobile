@@ -1,46 +1,27 @@
 {% extends 'base.html' %}
 
-{% block titulo %}Edição de veiculo {{ object.modelo }} {% endblock %}
+{% block titulo %}Edição de veículo {{ object.modelo }} {% endblock %}
 
 {% block conteudo %}
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
-            <h2 class="text-center mb-4">Cadastro de Novo Veículo</h2>
+            <h2 class="text-center mb-4">Editando Veículo</h2>
             <form action="/veiculo/editar/{{ object.pk }}/" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="row">
-                    <div class="col-md-6">
-                        <fieldset class="border p-3 mb-3">
-                            <legend class="w-auto px-2">Dados do Veículo</legend>
-                            <div class="form-group mb-3">
-                                <label for="marca" class="form-label">Marca</label>
-                                <div>
-                                {{ form.marca }}
-                                </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="modelo" class="form-label">Modelo</label>
-                                <div>{{ form.modelo }}</div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="ano" class="form-label">Ano</label>
-                                <div>{{ form.ano }}</div>
-                            </div>
-                        </fieldset>
-                    </div>
 
-                    <div class="col-md-6">
-                        <fieldset class="border p-3 mb-3">
-                            <legend class="w-auto px-2">Detalhes</legend>
-                            <div class="form-group mb-3">
-                                <label for="cor" class="form-label">Cor</label>
-                                <div>{{ form.cor }}</div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="combustivel" class="form-label">Combustível</label>
-                                <div>{{ form.combustivel }}</div>
-                            </div>
+                    <div class="col-md-5">
+                        <fieldset class="border p-3 mb-3 text-center">
+                            <legend class="w-auto px-2 fs-6">Foto Atual</legend>
+                            {% if object.foto %}
+                                <img src="{{ object.foto.url }}" class="img-fluid rounded shadow-sm mb-3" alt="Foto de {{ object }}">
+                            {% else %}
+                                <div class="alert alert-info">
+                                    Veículo sem foto.
+                                </div>
+                            {% endif %}
+                            
                             <div class="form-group mb-3">
                                 <label for="foto" class="form-label">Foto</label>
                                 <br>
@@ -48,11 +29,38 @@
                             </div>
                         </fieldset>
                     </div>
+
+                    <div class="col-md-7">
+                        <fieldset class="border p-3 mb-3">
+                            <legend class="w-auto px-2 fs-6">Dados do Veículo</legend>
+                            <div class="form-group mb-3">
+                                <label for="marca" class="form-label">Marca</label>
+                                {{ form.marca }}
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="modelo" class="form-label">Modelo</label>
+                                {{ form.modelo }}
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="ano" class="form-label">Ano</label>
+                                {{ form.ano }}
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="cor" class="form-label">Cor</label>
+                                {{ form.cor }}
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="combustivel" class="form-label">Combustível</label>
+                                {{ form.combustivel }}
+                            </div>
+                        </fieldset>
+                    </div>
+
                 </div>
 
                 <div class="row mt-4">
                     <div class="col text-center">
-                        <button type="submit" class="btn btn-primary btn-lg">Editar Veículo</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Salvar Alterações</button>
                     </div>
                 </div>
             </form>

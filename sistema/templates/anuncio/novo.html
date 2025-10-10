@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Cadastro de Novo Anúncio{% endblock %}
+
+{% block conteudo %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="card shadow">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4">Cadastrar Novo Anúncio</h2>
+                    <form action="/anuncio/novo/" method="post">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="{{ form.titulo.id_for_label }}" class="form-label">Título do Anúncio</label>
+                            {{ form.titulo }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.veiculo.id_for_label }}" class="form-label">Veículo</label>
+                            {{ form.veiculo }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.preco.id_for_label }}" class="form-label">Preço (R$)</label>
+                            {{ form.preco }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.descricao.id_for_label }}" class="form-label">Descrição</label>
+                            {{ form.descricao }}
+                        </div>
+                        
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Cadastrar Anúncio</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

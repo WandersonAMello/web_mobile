@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.forms import ModelForm
-from veiculo.models import Veiculo
+from anuncio.models import Anuncio
 
-class FormularioVeiculo(ModelForm):
-    """
-    Formulário para o model Veiculo.
-    """
+class FormularioAnuncio(ModelForm):
     class Meta:
-        model = Veiculo
+        model = Anuncio
         exclude = [] #campos a serem excluídos do formulário
