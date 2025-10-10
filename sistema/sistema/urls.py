@@ -25,5 +25,5 @@ urlpatterns = [
     path('logout/', Logout.as_view(), name='Logout'), #redireciona a url /logout para a view de logout
     path('admin/', admin.site.urls), #redireciona todas as urls /admin para o admin do django
     path('veiculo/', include('veiculo.urls'), name='veiculo'), #redireciona todas as urls /veiculo para o app veiculo
-    
+    path('anuncio/', include('anuncio.urls'), name='anuncio'), #redireciona todas as urls /anuncio para o app anuncio
 ]
