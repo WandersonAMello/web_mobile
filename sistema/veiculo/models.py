@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 from veiculo.consts import OPCOES_MARCAS, OPCOES_CORES, OPCOES_COMBUSTIVEIS
 
 
@@ -21,3 +22,10 @@ class Veiculo(models.Model):
         Retorna o nome da marca do veículo.
         """
         return dict(OPCOES_MARCAS).get(self.marca, "Desconhecida")
+    
+    @property #atributo que não persiste na base de dados
+    def veiculo_novo(self):
+        return self.ano == datetime.now().year
+    
+    def anos_de_uso(self):
+        return datetime.now().year - self.ano

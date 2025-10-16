@@ -19,7 +19,8 @@ class ListarAnuncios(LoginRequiredMixin, ListView): #herda de LoginRequiredMixin
 
     def get_queryset(self):
         """ Retorna a lista de anúncios ativos."""
-        return Anuncio.objects.filter(ativo=True) #para modificar o filtro, altere aqui
+        return Anuncio.objects.all() #para modificar o filtro, altere aqui
+        # return Anuncio.objects.filter(ativo=True) #exemplo de filtro para retornar apenas anúncios ativos
 
 
 class CriarAnuncios(LoginRequiredMixin, CreateView):
