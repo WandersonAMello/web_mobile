@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-from sistema.views import Login, Logout
+from sistema.views import Login, Logout, LoginAPI
 
 urlpatterns = [
     path('', Login.as_view(), name='Login'), #redireciona a url raiz para a view de login
@@ -26,4 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls), #redireciona todas as urls /admin para o admin do django
     path('veiculo/', include('veiculo.urls'), name='veiculo'), #redireciona todas as urls /veiculo para o app veiculo
     path('anuncio/', include('anuncio.urls'), name='anuncio'), #redireciona todas as urls /anuncio para o app anuncio
+    
+    path('autenticacao-api/', LoginAPI.as_view(), name='autenticacao-api'), #rota para autenticação via API REST
 ]

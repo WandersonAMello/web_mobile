@@ -9,6 +9,11 @@ from django.http import FileResponse, Http404
 from django.views.generic import View
 from django.core.exceptions import ObjectDoesNotExist
 
+from rest_framework.generics import ListAPIView, DestroyAPIView
+from anuncio.serializers import SerializadorAnuncio
+from rest_framework.authentication import TokenAuthentication
+from rest_framework import permissions
+
 class ListarAnuncios(LoginRequiredMixin, ListView): #herda de LoginRequiredMixin para exigir autenticação
     """
     View para listar anúncios cadastrados.
@@ -19,8 +24,8 @@ class ListarAnuncios(LoginRequiredMixin, ListView): #herda de LoginRequiredMixin
 
     def get_queryset(self):
         """ Retorna a lista de anúncios ativos."""
-        return Anuncio.objects.all() #para modificar o filtro, altere aqui
-        # return Anuncio.objects.filter(ativo=True) #exemplo de filtro para retornar apenas anúncios ativos
+        #return Anuncio.objects.all() #para modificar o filtro, altere aqui
+        return Anuncio.objects.filter(ativo=True) #exemplo de filtro para retornar apenas anúncios ativos
 
 
 class CriarAnuncios(LoginRequiredMixin, CreateView):
@@ -49,3 +54,11 @@ class DeletarAnuncios(LoginRequiredMixin, DeleteView):
     template_name = 'anuncio/deletar.html'
     success_url = reverse_lazy('listar-anuncios') #redireciona para a lista de anúncios após deletar um anúncio
     
+class APIListarAnuncios(ListAPIView):
+    """
+    View para listar instâncias de anúncios (por meio da API REST).
+    """
+    serializer_class = SerializadorAnuncio
+    
+    def get_queryset(self):
+        return Anuncio.objects.all()

@@ -102,3 +102,42 @@ class TestesViewCriarAnuncios(TestCase):
         
         self.assertEqual(Anuncio.objects.count(), 1)
         self.assertEqual(Anuncio.objects.first().titulo, 'Anuncio Teste')
+        
+class TestesViewEditarAnuncios(TestCase):
+    '''
+    Classe de testes para a view EditarAnuncios
+    '''
+    def setUp(self):
+        self.user = User.objects.create(username='teste', password='12345')
+        self.client.force_login(self.user)
+        self.url = reverse('editar-anuncios', args=[1])
+        veiculo = Veiculo.objects.create(
+            marca=1,
+            modelo='TesteModelo',
+            ano=datetime.now().year,
+            cor=2,
+            combustivel=3
+        )
+        self.anuncio = Anuncio.objects.create(
+            titulo='Anuncio Teste',
+            descricao='Descrição do anúncio de teste',
+            preco=10000.00,
+            veiculo=veiculo
+        )
+    
+    def test_put(self):
+        dados = {
+            'titulo': 'Anuncio Teste Editado',
+            'descricao': 'Descrição do anúncio de teste editado',
+            'preco': 12000.00,
+            'veiculo': self.anuncio.veiculo.id
+        }
+        response = self.client.post(self.url, dados)
+        
+        #verifica se apos a edicao houve um redirecionamento para a lista de anuncios
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('listar-anuncios'))
+        
+        self.anuncio.refresh_from_db()
+        self.assertEqual(self.anuncio.titulo, 'Anuncio Teste Editado')
+        self.assertEqual(self.anuncio.preco, 12000.00)

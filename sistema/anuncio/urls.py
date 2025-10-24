@@ -8,4 +8,6 @@ urlpatterns = [
     path('novo/', CriarAnuncios.as_view(), name='criar-anuncios'), #rota para criar um novo anúncio
     path('editar/<int:pk>/', EditarAnuncios.as_view(), name='editar-anuncios'), #rota para editar um anúncio
     path('deletar/<int:pk>/', DeletarAnuncios.as_view(), name='deletar-anuncios'), #rota para deletar um anúncio
+    
+    path('api/', APIListarAnuncios.as_view(), name='api-listar-anuncios'), #rota para listar anuncios via API REST
 ]

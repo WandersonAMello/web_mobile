@@ -9,6 +9,11 @@ from django.http import FileResponse, Http404
 from django.views.generic import View
 from django.core.exceptions import ObjectDoesNotExist
 
+from rest_framework.generics import ListAPIView, DestroyAPIView
+from veiculo.serializers import SerializadorVeiculo
+from rest_framework.authentication import TokenAuthentication
+from rest_framework import permissions
+
 
 class ListarVeiculos(LoginRequiredMixin, ListView): #herda de LoginRequiredMixin para exigir autenticação
     """
@@ -64,3 +69,12 @@ class FotoVeiculo(View):
         except Exception as exeption:
             raise exeption
         
+class APIListarVeiculos(ListAPIView):
+    """
+    View para listar instâncias de veiculos (por meio da API REST).
+    """
+    serializer_class = SerializadorVeiculo
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+        return Veiculo.objects.all()
