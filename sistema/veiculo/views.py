@@ -78,3 +78,10 @@ class APIListarVeiculos(ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
     def get_queryset(self):
         return Veiculo.objects.all()
+    
+class APIDeletarVeiculos(DestroyAPIView):
+    """
+    View para deletar instâncias de veiculos (por meio da API REST).
+    """
+    serializer_class = SerializadorVeiculo
+    
