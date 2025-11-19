@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, LoadingController, NavController, ToastController, IonButtons, IonMenuButton, IonText, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonItemSliding, IonThumbnail, IonLabel, IonItemOptions, IonItemOption } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, LoadingController, NavController, ToastController, IonButtons, IonButton, IonMenuButton, IonText, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonItemSliding, IonThumbnail, IonLabel, IonItemOptions, IonItemOption, IonBadge } from '@ionic/angular/standalone';
 import { Storage } from '@ionic/storage-angular';
 import { Veiculo } from './veiculo.model';
 import { Usuario } from '../login/usuario.model';
@@ -12,7 +12,31 @@ import { CapacitorHttp, HttpOptions, HttpResponse } from '@capacitor/core';
   selector: 'app-veiculo',
   templateUrl: './veiculo.page.html',
   styleUrls: ['./veiculo.page.scss'],
-  imports: [IonItemOption, IonItemOptions, IonLabel, IonItemSliding, IonItem, IonList, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonText, IonButtons, IonMenuButton, IonContent, IonHeader, IonTitle, IonToolbar, IonThumbnail, CommonModule, FormsModule],
+  imports: [
+    IonItemOption,
+    IonItemOptions,
+    IonLabel,
+    IonItemSliding,
+    IonItem,
+    IonList,
+    IonCardContent,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCardHeader,
+    IonCard,
+    IonText,
+    IonButtons,
+    IonButton,
+    IonMenuButton,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    IonThumbnail,
+    CommonModule,
+    FormsModule,
+    IonBadge
+],
   providers: [Storage]
 })
 export class VeiculoPage implements OnInit {

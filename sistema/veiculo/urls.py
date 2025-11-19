@@ -11,4 +11,5 @@ urlpatterns = [
     path('fotos/<str:arquivo>/', FotoVeiculo.as_view(), name='foto-veiculo'), #rota para servir fotos de veículos
     
     path('api/', APIListarVeiculos.as_view(), name='api-listar-veiculos'), #rota para listar veículos via API REST
+    path('api/deletar/<int:pk>/', APIDeletarVeiculos.as_view(), name='api-deletar-veiculos'), #rota para deletar um veículo via API REST
 ]

@@ -84,4 +84,8 @@ class APIDeletarVeiculos(DestroyAPIView):
     View para deletar instâncias de veiculos (por meio da API REST).
     """
     serializer_class = SerializadorVeiculo
-    
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Veiculo.objects.all()
